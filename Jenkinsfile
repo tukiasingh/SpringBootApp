@@ -14,7 +14,7 @@ pipeline {
                 //clean the target
                 echo "Cleaning target directory"
                 // Run Maven on a Unix agent.
-                sh ./mvnw clean
+                sh "./mvnw clean"
             }
         }
 
@@ -23,7 +23,7 @@ pipeline {
                 //compile the code
                 echo "Compiling the code"
                 // Run Maven on a Unix agent.
-                sh ./mvnw compile
+                sh "./mvnw compile"
             }
         }
         stage('Maven Test') {
@@ -31,7 +31,7 @@ pipeline {
                 //test the code
                 echo "Running Junits"
                 // Run Maven on a Unix agent.
-                sh ./mvnw test
+                sh "./mvnw test"
             }
         }
 
@@ -40,7 +40,7 @@ pipeline {
                 //test the code
                 echo "Creating Artifacts"
                 // Run Maven on a Unix agent.
-                sh ./mvnw package
+                sh "./mvnw package"
             }
         }
     }
