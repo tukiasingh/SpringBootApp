@@ -49,7 +49,7 @@ pipeline {
                 //test the code
                 echo "Running Application"
                 // Run Maven on a Unix agent.
-                sh "java -jar /target/SpringBootApp-0.0.1-SNAPSHOT.jar"
+                sh "java -jar target/SpringBootApp-0.0.1-SNAPSHOT.jar"
             }
         }
     }
