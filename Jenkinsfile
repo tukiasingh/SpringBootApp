@@ -43,14 +43,5 @@ pipeline {
                 sh "./mvnw package"
             }
         }
-
-        stage('Run the Application') {
-            steps {
-                //test the code
-                echo "Running Application"
-                // Run Maven on a Unix agent.
-                sh "java -jar target/SpringBootApp-0.0.1-SNAPSHOT.jar"
-            }
-        }
     }
 }
